@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+        <div class=col-sm-12>
+            <h1 class="display-3">Introduction</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class=col-sm-12>
+            <p>This application can be used to translate text of one language to any other lenguage.</p>
+        </div>
+    </div>
+    <div class="row"></div>
+    <form [formGroup]="translationForm" (submit)="onSubmit()">
+        <div class="form-group">
+            <div class="row">
+                <div class=col-sm-8>
+                    <h1 class="display-4">Enter your text here</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class=col-sm-8>
+                    <textarea class="form-control" placeholder="Enter your text here..." name="inputText" formControlName="inputText" id="inputText" rows="10"></textarea>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class=col-sm-2>
+                    <h5 class="display-5">Target Language</h5>
+                </div>
+                <div class=col-sm-3>
+                    <select class="form-control" name="destinationLang" id="destinationLang" formControlName="destinationLang">
+                        <option *ngFor="let lang of targetLanguages" [value]="lang.value">{{lang.name}}</option>
+                    </select>
+                </div>
+                <div class=col-sm-7>                        
+                        <input type="submit" value="Translate" class="btn btn-primary" [disabled]="!translationForm.valid">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                    <div class=col-sm-8>
+                        <h1 class="display-4">Translated Text</h1>
+                    </div>
+            </div>
+            <div class="row">
+                <div class=col-sm-8>
+                    <textarea class="form-control" name="translatedText" [value]="translatedText" id="translatedText" rows="10" readonly></textarea>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+</div>

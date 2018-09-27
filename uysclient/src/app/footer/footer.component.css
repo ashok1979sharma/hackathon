@@ -1,0 +1,12 @@
+.jumbotronHomeHeader {
+    padding: 0;
+  height: 90vmin; /* Here you can change the height */
+  width: 100%;
+    background-image:url('http://4.bp.blogspot.com/-CIy9X0Vwlko/VFvyStJbP_I/AAAAAAAACys/Ze7QVlcVmX0/s1600/HOPE%2BLogo%2Bcopy.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #efeeec;
+  background-position: left center;
+  overflow: hidden;
+    position: relative;
+}
